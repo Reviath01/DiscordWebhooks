@@ -40,8 +40,29 @@ button {
     cursor: pointer;
     display: block;
     position: absolute;
-    top: 20%;
-    left: 50%;
+    top: 15%;
+    left: 25%;
+    -moz-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);    
+}
+.sendembed {
+    width: 500px;
+    height: 400px;
+    padding: 1%;
+    color: white;
+    background-color: #4f5263;
+    outline: none;
+    border: 2px solid #6994ff;
+    border-radius: 20px;
+    text-align: center;
+    text-decoration: none;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    display: block;
+    position: absolute;
+    top: 15%;
+    left: 75%;
     -moz-transform: translateX(-50%);
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);    
