@@ -2,10 +2,10 @@
 <html>        
   <head>
         <meta charset="UTF-8">
+        <link rel="stylesheet" href="css/index.css">
         <title>Discord Webhooks</title>
-        <link rel="stylesheet" href="css/index.css"/>
     </head>
-   <body>
+    <body>
         <div align="center" class="sendmessage">
             <br/>
         Webhook Username: <br/><input type="text" id="username" required=true><br/><br/> 
@@ -18,6 +18,9 @@
         Embed Title: <br/><input type="text" id="embed_title"><br/><br/> 
         Embed Description: <br/><input type="text" id="embed_description"><br/><br/>
         Embed Color: <br/><input type="text" id="embed_color"><br/><br/>
+        Embed Author: <br/><input type="text" id="embed_author"><br/><br/>
+        Embed Author Avatar: <br/><input type="text" id="embed_author_avatar_url"><br/><br/>
+        Embed Image: <br><input type="text" id="embed_image">
       </div>
 
         <button type="submit" id="submit" onclick="sendMessage()"> Send! </button>
@@ -46,7 +49,14 @@
             embeds: [{
                 title: document.getElementById("embed_title").value,
                 description: document.getElementById("embed_description").value,
-                color: parseInt(document.getElementById("embed_color").value)
+                color: parseInt(document.getElementById("embed_color").value),
+                author: {
+                  name: document.getElementById("embed_author").value,
+                  icon_url: document.getElementById("embed_author_avatar_url").value
+                },
+                image: {
+                  url: document.getElementById("embed_image").value
+                }
               }]
             }
           await request.send(JSON.stringify(params))
@@ -58,6 +68,7 @@
           document.getElementById("embed_title").value = ""
           document.getElementById("embed_description").value = ""
           document.getElementById("embed_color").value = ""
+          document.getElementById("embed_author").value = ""
         }
       </script>
 </html>
