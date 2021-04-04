@@ -1,0 +1,60 @@
+body {
+    background-color: #363636;
+}
+
+button {
+    width: 100px;
+    height: 50px;
+    padding: 1%;
+    color: white;
+    background-color: #000000;
+    outline: none;
+    border: 2px solid #6994ff;
+    border-radius: 20px;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    display: block;
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    -moz-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);    
+    }
+    
+    .sendmessage {
+    width: 500px;
+    height: 400px;
+    padding: 1%;
+    color: white;
+    background-color: #4f5263;
+    outline: none;
+    border: 2px solid #6994ff;
+    border-radius: 20px;
+    text-align: center;
+    text-decoration: none;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    display: block;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    -moz-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);    
+}
+input[type=text]:focus {
+  border: 3px solid #555;
+}
+input[type=text] {
+    width: 200px;
+    height: 20px;
+}
+
+input[type=message] {
+    width: 300px;
+    height: 120px;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>        
+  <head>
+        <meta charset="UTF-8">
+        <title>Discord Webhooks</title>
+        <link rel="stylesheet" href="css/index.css"/>
+    </head>
+   <body>
+        <div align="center" class="sendmessage">
+            <br/>
+            Webhook Username: <br/><input type="text" id="username" required=true><br/><br/> 
+        Webhook URL: <br/><input type="text" id="webhook_url" required=true><br/><br/>
+        Avatar URL: <br/><input type="text" id="avatar_url" required=true><br/><br/>
+        Message: <br/><input type="message" id="message" required=true>
+        <button type="submit" id="submit" onclick="sendMessage()"> Send! </button>
+    </div>
+    </body>
+    <script>
+        async function sendMessage() {
+          var request = new XMLHttpRequest();
+          request.open("POST", document.getElementById("webhook_url").value);
+
+          request.setRequestHeader('Content-type', 'application/json');
+          if (document.getElementById("webhook_url").value == "") {
+            document.getElementById("webhook_url").focus()
+            alert("Give the webhook url!")
+            return
+        }
+
+        if (document.getElementById("message").value == "") {
+        document.getElementById("message").focus()
+        alert("Cannot send an empty message")
+        return
+    }
+          var params = {
+            username: document.getElementById("username").value,
+            avatar_url: document.getElementById("avatar_url").value,
+            content: document.getElementById("message").value
+          }
+          await request.send(JSON.stringify(params))
+          alert("Successful!")
+          document.getElementById("message").value = ""
+          document.getElementById("webhook_url").value = ""
+          document.getElementById("avatar_url").value = ""
+          document.getElementById("username").value = ""
+        }
+      </script>
+</html>
