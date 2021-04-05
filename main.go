@@ -8,6 +8,7 @@ import (
 func main() {
 	server := gin.Default()
     server.Static("/css", "./public/css")
+    server.Static("/js", "./public/js")
 	server.LoadHTMLGlob("public/*.html")
 
 	server.GET("/", func(c *gin.Context) {
