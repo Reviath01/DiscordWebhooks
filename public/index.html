@@ -2,7 +2,7 @@
 <html>        
   <head>
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/index.css">
         <title>Discord Webhooks</title>
     </head>
     <body>
@@ -13,19 +13,19 @@
         Avatar URL: <br/><input type="text" id="avatar_url" required=true><br/><br/>
         Message: <br/><input type="text" id="message" required=true><br/><br/>
         </div>
-        <div align="right" class="sendembed">
+        <div class="sendembed">
             <br/>
         Embed Title: <br/><input type="text" id="embed_title"><br/><br/> 
         Embed Description: <br/><input type="text" id="embed_description"><br/><br/>
         Embed Color: <br/><input type="text" id="embed_color"><br/><br/>
         Embed Author: <br/><input type="text" id="embed_author"><br/><br/>
         Embed Author Avatar: <br/><input type="text" id="embed_author_avatar_url"><br/><br/>
+        Embed Thumbnail URL: <br><input type="text" id="embed_thumbnail_url"><br/><br/>
+        Embed Image: <br><input type="text" id="embed_image"><br/><br/>
+        Embed Footer: <br><input type="text" id="embed_footer"><br/><br/>
+        Embed Footer Image: <br><input type="text" id="embed_footer_image"><br/><br/>
       </div>
-      <a style="position: absolute; top: 40%; left: 75%; color: white;">Embed Image: </a><br><input type="text" id="embed_image" style="position: absolute; top: 43%; left: 75%;"><br/><br/>
-      <a style="position: absolute; top: 30%; left: 75%; color: white;">Embed Footer: </a><br><input type="text" id="embed_footer" style="position: absolute; top: 33%; left: 75%;"><br/><br/>
-      <a style="position: absolute; top: 20%; left: 75%; color: white;">Embed Footer Image:</a> <br><input type="text" id="embed_footer_image" style="position: absolute; top: 23%; left: 75%;"><br/><br/>
-
-        <button type="submit" id="submit" onclick="sendMessage()"> Send! </button>
+        <button type="submit" id="submit" onclick="sendMessage()">Send!</button>
     </body>
     <script src="js/sendMessage.js"></script>
 </html>

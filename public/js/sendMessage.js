@@ -14,7 +14,7 @@ async function sendMessage() {
   alert("Cannot send an empty message")
   return
 }
-if (document.getElementById("embed_title").value == "" && document.getElementById("embed_description").value == "" && document.getElementById("embed_color").value == "" && document.getElementById("embed_author").value == "" && document.getElementById("embed_footer_image").value == "" && document.getElementById("embed_footer").value == "") {
+if (document.getElementById("embed_title").value == "" && document.getElementById("embed_description").value == "" && document.getElementById("embed_color").value == "" && document.getElementById("embed_author").value == "" && document.getElementById("embed_footer_image").value == "" && document.getElementById("embed_footer").value == "" && document.getElementById("embed_thumbnail_url").value == "") {
 var params = {
       username: document.getElementById("username").value,
       avatar_url: document.getElementById("avatar_url").value,
@@ -32,6 +32,7 @@ var params = {
     document.getElementById("embed_author").value = ""
     document.getElementById("embed_footer_image").value = ""
     document.getElementById("embed_footer").value = ""
+    document.getElementById("embed_thumbnail_url").value = ""
     return
   }
   var params = {
@@ -52,6 +53,9 @@ var params = {
           footer: {
             text: document.getElementById("embed_footer").value,
             icon_url: document.getElementById("embed_footer_image").value
+          },
+          thumbnail: {
+              url:  document.getElementById("embed_thumbnail_url").value
           }
         }]
       }
@@ -67,4 +71,5 @@ var params = {
     document.getElementById("embed_author").value = ""
     document.getElementById("embed_footer_image").value = ""
     document.getElementById("embed_footer").value = ""
-  }
+    document.getElementById("embed_thumbnail_url").value = ""
+}
