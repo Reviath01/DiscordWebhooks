@@ -55,10 +55,10 @@ button {
     outline: none;
     border: 2px solid #6994ff;
     border-radius: 20px;
-    text-align: center;
     text-decoration: none;
     transition-duration: 0.4s;
     cursor: pointer;
+    text-align: left;
     display: block;
     position: absolute;
     top: 15%;
@@ -68,14 +68,14 @@ button {
     transform: translateX(-50%);    
 }
 input[type=text]:focus {
-  border: 3px solid #555;
-}
-input[type=text] {
-    width: 200px;
-    height: 20px;
-}
+    border: 3px solid #555;
+  }
+  input[type=text] {
+      width: 200px;
+      height: 20px;
+  }
 
-input[type=message] {
-    width: 300px;
-    height: 120px;
-}
+  input[type=text2]:focus {
+    border: 3px solid #555;
+  }
+  
