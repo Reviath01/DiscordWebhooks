@@ -44,6 +44,26 @@
         alert("Cannot send an empty message")
         return
     }
+    if (document.getElementById("embed_title").value == "" && document.getElementById("embed_description").value == "" && document.getElementById("embed_color").value == "" && document.getElementById("embed_author").value == "" && document.getElementById("embed_footer_image").value == "" && document.getElementById("embed_footer").value == "") {
+      var params = {
+            username: document.getElementById("username").value,
+            avatar_url: document.getElementById("avatar_url").value,
+            content: document.getElementById("message").value,
+    }
+          await request.send(JSON.stringify(params))
+          alert("Successful!")
+          document.getElementById("message").value = ""
+          document.getElementById("webhook_url").value = ""
+          document.getElementById("avatar_url").value = ""
+          document.getElementById("username").value = ""
+          document.getElementById("embed_title").value = ""
+          document.getElementById("embed_description").value = ""
+          document.getElementById("embed_color").value = ""
+          document.getElementById("embed_author").value = ""
+          document.getElementById("embed_footer_image").value = ""
+          document.getElementById("embed_footer").value = ""
+          return
+        }
         var params = {
             username: document.getElementById("username").value,
             avatar_url: document.getElementById("avatar_url").value,
